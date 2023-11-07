@@ -1,11 +1,7 @@
 import React from 'react'
 
 const Customers = () => {
-  return (
-    <main className='flex flex-col min-h-screen w-full items-center justify-center'>
-      Customers
-    </main>
-  )
+  return <h1 className='text-7xl'>Customers</h1>
 }
 
 export default Customers

@@ -15,6 +15,7 @@ import DarkIcon from '../public/Dark_Icon.svg'
 import NavLink from './(Navbar)/NavLink'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Inter } from 'next/font/google'
 
 const LeftNavbarList = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,14 +24,16 @@ const LeftNavbarList = () => {
 
   return (
     <>
-      <div className='min-h-screen w-[22rem] shadow-2xl hidden md:block'>
-        {/* <Link href={'/'}>
-          <Image src={Logo} alt='Garage Master Logo' />
-        </Link> */}
-        <div>
-          <h1 className='text-2xl my-10 ms-10'>Garage Master</h1>
-        </div>
-        <ul className='bg-white mx-5 px-4 pt-5 flex flex-col gap-y-[4.5rem]'>
+      <div className='min-h-screen w-[22rem] border-r-[1px] border-r-[#e5e5e59F] shadow-md hidden md:block'>
+        <Link href={'/'}>
+          <div className='w-full flex items-center justify-center gap-2.5 border-b-[1px] border-b-[#e5e5e59F] py-10'>
+            <Image src={Logo} alt='Logo' quality={100} className='w-14 h-6' />
+            <h1 className={`text-[1.525rem] font-bold tracking-wide`}>
+              Garage Master
+            </h1>
+          </div>
+        </Link>
+        <ul className='bg-white mx-2.5 px-2 pt-10 flex flex-col gap-y-14'>
           <NavLink
             title='Dashboard'
             icon={<MdDashboard size={25} />}
