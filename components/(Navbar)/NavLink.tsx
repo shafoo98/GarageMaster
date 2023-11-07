@@ -19,11 +19,16 @@ const NavLink = ({ title, icon, href, extraStyles }: PropTypes) => {
   return (
     <Link href={href} className='w-full'>
       <li
-        className={`w-full flex items-center gap-x-5 ${
-          isActive ? 'font-extrabold bg-blue-50' : 'font-light text-[#8e8e8e]'
+        className={`w-full flex items-center gap-x-3 py-5 px-2.5 rounded-xl ${
+          isActive
+            ? 'font-extrabold bg-[#5c7291CC] text-white'
+            : 'font-light text-[#8e8e8e]'
         } ${extraStyles}`}
       >
-        {icon}
+        <span className={`${isActive ? 'text-[#FFF]' : 'text-black'}`}>
+          {icon}
+        </span>
+
         {title}
       </li>
     </Link>
